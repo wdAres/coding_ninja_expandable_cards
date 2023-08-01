@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(233, 233, 233);
+    height: 100vh;
+}
+
+.container {
+    width: 75vw;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.slide {
+    flex: 0.5;
+    cursor: pointer;
+    transition: flex 0.2s ease-in;
+    padding: 20px;
+}
+
+.slide > h1 {
+    font-size: 16px;
+    color: #3b3a3a;
+    transition:  0.2s ease-in;
+}
+
+.slide > p {
+    margin-top: 50px;
+    font-size: 14px;
+    opacity: 0;
+}
+
+
+.slide:nth-child(1) {
+    background: url(./assets/person4.webp) no-repeat bottom 0 right -10px / 182px 240px,
+        url('./assets/overlay1.png') no-repeat top 130px right 0,
+        url('./assets/overlay2.png') no-repeat bottom 0 right 40px, rgb(241, 170, 170);
+}
+
+.slide:nth-child(2) {
+    background: url(./assets/person3.webp) no-repeat bottom 0 right -10px / 182px 240px,
+        url('./assets/overlay1.png') no-repeat top 130px right 0,
+        url('./assets/overlay2.png') no-repeat bottom 0 right 40px, rgb(241, 234, 170);
+}
+
+.slide:nth-child(3) {
+    background: url(./assets/person2.webp) no-repeat bottom 0 right -10px / 182px 240px,
+        url('./assets/overlay1.png') no-repeat top 130px right 0,
+        url('./assets/overlay2.png') no-repeat bottom 0 right 40px, rgb(170, 241, 208);
+}
+
+.slide:nth-child(4) {
+    background: url(./assets/person5.webp) no-repeat bottom 0 right -10px / 182px 240px,
+        url('./assets/overlay1.png') no-repeat top 130px right 0,
+        url('./assets/overlay2.png') no-repeat bottom 0 right 40px, rgb(170, 203, 241);
+}
+
+.slide:nth-child(5) {
+    background: url(./assets/person.webp) no-repeat bottom 0 right -10px / 182px 240px,
+        url('./assets/overlay1.png') no-repeat top 130px right 0,
+        url('./assets/overlay2.png') no-repeat bottom 0 right 40px, rgb(239, 170, 241);
+}
+
+
+
+.slide.active {
+    flex: 2 !important;
+}
+
+.slide.active > h1 {
+    font-size: 26px;
+}
+
+.slide.active > p {
+    opacity: 1;
+    transition: opacity 0.2s ease-in 0.25s;
+}
+
